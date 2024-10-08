@@ -28,10 +28,11 @@
         const add = document.getElementById('add');
         const table = document.getElementById('tableaccess').getElementsByTagName('tbody')[0];
         add.addEventListener('click',()=>{
-            const addrow = table.insertRow();
+            const addrow = document.createElement('tr')
             addrow.innerHTML= `<td><input type="text" placeholder="Name"></td>
                            <td><input type="text" placeholder="Email"></td>
                            <td><button onclick="remove(this)">Remove</button></td>`
+            table.appendChild(addrow)
         })
        function remove(button){
         const removerow=button.parentNode.parentNode;
